@@ -1,0 +1,331 @@
+# spec file
+
+# fields shared with current accepted file upload formats (ENIGMA + SESAR)
+shared_fields:
+    - "id"
+    - "name"
+    - "well"
+    - "depth"
+    - "elevation"
+    - "Date"
+    - "Time"
+    - "Timezone"
+    - "Material"
+    - "Env_pakcage"
+    - "Description"
+
+# for the verification_mapping only fields that have verifiers that are not just "is_string"
+
+SESAR:
+    basic_columns:
+        - "Sample Name"
+        - "Material"
+        - "Field name (informal classification)"
+        - "Location Description"
+        - "Locality Description"
+        - "Collection method"
+        - "Purpose"
+        - "Navigation type"
+        - "Primary physiographic feature"
+        - "Name of physiographic feature"
+        - "Field program/cruise"
+        - "Collector/Chief Scientist"
+        - "Collection date precision"
+        - "Current archive"
+        - "Related Identifiers"
+        - "Platform type"
+        - "Location description"
+        - "Zone"
+        - "State/Province"
+        - "Original archive contact"
+        - "Classification"
+        - "Vertical Datum"
+        - "Original archive"
+        - "Platform name"
+        - "Collection time (end)"
+        - "County"
+        - "Size unit"
+        - "Age unit"
+        - "Locality"
+        - "Sample Description"
+        - "Collection method description"
+        - "Other name(s)"
+        - "Geological unit"
+        - "Collector/Chief Scientist Address"
+        - "Collection time"
+        - "Locality description"
+        - "Size"
+        - "Launch platform name"
+        - "Depth scale"
+        - "Country"
+        - "City/Township"
+        - "Sub-object type"
+        - "Launch ID"
+    verification_mapping:
+        "IGSN":
+            - regex_string 
+            - []
+        "Parent IGSN": 
+            - regex_string 
+            - []
+        "Release Date": 
+            - is_date 
+            - []
+        "Latitude": 
+            - is_numeric 
+            - []
+        "Longitude": 
+            - is_numeric 
+            - []
+        "Coordinate Precision?": 
+            - is_numeric 
+            - []
+        "Elevation start": 
+            - is_numeric 
+            - []
+        "Elevation unit": 
+            - is_numeric 
+            - []
+        "Collection date": 
+            - is_date 
+            - []
+        "Current archive contact": 
+            - is_email 
+            - []
+        "Relation Type": 
+            - controlled_vocab 
+            - - - "grouped" 
+                - "co-located"
+        # new ones
+        "Latitude (end)": 
+            - is_numeric 
+            - []
+        "Depth in Core (min)": 
+            - is_numeric 
+            - []
+        "Age (min)": 
+            - is_numeric 
+            - []
+        "Depth in Core (max)": 
+            - is_numeric 
+            - []
+        "Elevation end": 
+            - is_numeric 
+            - []
+        "Easting (m)": 
+            - is_numeric 
+            - []
+        "Longitude (end)": 
+            - is_numeric 
+            - []
+        "Northing (m)": 
+            - is_numeric 
+            - []
+        "Age (max)": 
+            - is_numeric 
+            - []
+        "Geological age": 
+            - is_numeric 
+            - []
+        "Collection date (end)": 
+            - is_date 
+            - []
+    column_mapping:
+        "Sample Name": "name"
+        "IGSN": "id"
+        "Parent IGSN": "parent_id"
+    groups:
+        -   value: "Elevation start"
+            units: "Elevation unit"
+
+        -   value: "Latitude"
+            units: "str:degrees"
+
+        -   value: "Collection date"
+            units: "Collection date precision"
+
+        -   value: "Longitude"
+            units: "str:degrees"
+
+        -   value: "Age (min)"
+            units: "Age unit"
+
+        -   value: "Age (max)"
+            units: "Age unit"
+
+        -   value: "Geological Age"
+            units: "Geological unit"
+
+        -   value: "Collection date (end)"
+            units: "Collection date precision"
+
+        -   value: "Elevation end"
+            units: "Elevation unit"
+
+        -   value: "Depth in Core (max)"
+            units: "Depth scale"
+
+        -   value: "Depth in Core (min)"
+            units: "Depth scale"
+
+        -   value: "Size"
+            units: "Size unit"
+    date_columns:
+        - "Release Date"
+        - "Collection Date"
+
+ENIGMA:
+    basic_columns:
+        - "SampleID"
+        - "Experiment Name"
+        - "Area Name"
+        - "Well Name"
+        - "Environmental Package"
+        - "Material"
+        - "Description"
+        - "Date"
+        - "Collection Time"
+        - "Time Zone"
+        - "Geological Zone"
+        - "Recovery Factor"
+        - "Method"
+        - "Fraction"
+        - "Replicate"
+        - "Maturation Time"
+        - "Treatment"
+        - "Temperature (Celsius)"
+        - "Moisture (%)"
+        - "Pore Water Extraction (microliters)"
+        - "Conductivity (mS/cm)"
+        - "pH"
+        - "DAPI Cell Count (cells/g)"
+        - "DNA Picogreen Total (ng)"
+        - "Total Carbon (mg/g dry weight)"
+        - "Biomass Carbon (mg/g)"
+        - "Total Nitrogen (mg/g dry weight)"
+        - "Leucine Activity (ngC/day cell}"
+        - "Functional Area"
+        - "Type of Well"
+        - "Ground Elevation (ft AMSL)"
+        - "Installation Method"
+        - "Boring (ft BGS)"
+        - "Boring Refusal"
+        - "Boring Diameter (in)"
+        - "Screen Type"
+        - "Well Casing Type"
+        - "Well Casing OD (in)"
+        - "Well Casing ID (in)"
+        - "Drive Casing Type"
+        - "Drive Casing ID (in)"
+        - "Drive Casing OD (in)"
+        - "Drive Casing Start Depth (ft BGS)"
+        - "Drive Casing End Depth (ft BGS)"
+        - "Packing Type"
+        - "Packing Depth Start (ft BGS)"
+        - "Packing Depth End (ft BGS)"
+        - "TopofWeatheredBedrock (ft BGS)"
+        - "TopofFreshBedrock (ft BGS)"
+        - "Aquifer"
+        - "Fractures/Cavities/WaterBreaks"
+        - "Other Name"
+        - "Screened"
+        - "Open"
+        - "Well Status"
+        - "Condition"
+        - "Origination or Plug/Abandon"
+        - "Min Water Level (ft AMSL)"
+        - "Average Water Level (ft AMSL)"
+        - "Max Water Level (ft AMSL)"
+        - "Upper Seal Type"
+        - "Upper Seal Start Depth (ft BGS)"
+        - "Upper Seal End Depth (ft BGS)"
+        - "Lower Seal Type (ft BGS)"
+        - "Lower Seal Start Depth (ft BGS)"
+        - "Lower Seal End Depth (ft BGS)"
+        - "Open Casing Type"
+        - "Open Casing OD (in)"
+        - "Open Casing ID (in)"
+        - "Open Casing Depth (ft BGS)"
+        - "Open Hole Diameter (in)"
+        - "Open Hole Depth (ft BGS)"
+        - "Open Interval Start Depth (ft BGS)"
+        - "Open Interval End Depth (ft BGS)"
+        - "Open Interval Diameter (in)"
+        - "Rock Formation"
+        - "depth"
+        - "elevation"
+        - "time"
+        - "timezone"
+        - "material"
+        - "env_package"
+        - "continent"
+        - "country"
+        - "region"
+        - "biome"
+        - "feature"
+    verification_mapping:
+        "Filter (micron)":
+            - is_numeric
+            - []
+        "Date":
+            - is_date
+            - []
+        "Latitude":
+            - is_numeric
+            - []
+        "Longitude":
+            - is_numeric
+            - []
+        "Depth (cm bgs)":
+            - is_numeric
+            - []
+        "Redox Potential  (?)":
+            - is_numeric
+            - []
+        "pH":
+            - is_numeric
+            - []
+        "AODC (cells/g)":
+            - is_numeric
+            - []
+        "Organic Carbon (mg/g dry weight)":
+            - is_numeric
+            - []
+        "BONCAT Activity (cell/g)":
+            - is_numeric
+            - []
+        "Top of Casing Stickup (ft)":
+            - is_numeric
+            - []
+        "Top of Casing Elevation (ft AMSL)":
+            - is_numeric
+            - []
+        "Screened Interval (ft)":
+            - is_numeric
+            - []
+        "Screen Start Depth (ft BGS)":
+            - is_numeric
+            - []
+        "Screen End Depth (ft BGS)":
+            - is_numeric
+            - []
+        "Screen Top Elevation (ft AMSL)":
+            - is_numeric
+            - []
+        "Screen Bottom Elevation (ft AMSL)":
+            - is_numeric
+            - []
+        "Well Casing Depth (ft BGS)":
+            - is_numeric
+            - []
+        # Jon-Marcs columns
+        "date":
+            - is_date
+            - []
+    column_mapping:
+        "SampleID": "id"
+        "Well Name": "parent_id"
+    date_columns:
+        - "Date"
+    column_unit_regex:
+        - '\((.+)\)'
