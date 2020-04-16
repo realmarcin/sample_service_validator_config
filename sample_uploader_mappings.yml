@@ -252,17 +252,17 @@ ENIGMA:
         - "Open Interval End Depth (ft BGS)"
         - "Open Interval Diameter (in)"
         - "Rock Formation"
-        - "depth"
-        - "elevation"
-        - "time"
-        - "timezone"
-        - "material"
-        - "env_package"
-        - "continent"
-        - "country"
-        - "region"
-        - "biome"
-        - "feature"
+        - "Depth"
+        - "Elevation"
+        - "Time"
+        - "Timezone"
+        - "Material"
+        - "Env_package"
+        - "Continent"
+        - "Country"
+        - "Region"
+        - "Biome"
+        - "Feature"
     verification_mapping:
         "Filter (micron)":
             - is_numeric
@@ -319,7 +319,7 @@ ENIGMA:
             - is_numeric
             - []
         # Jon-Marcs columns
-        "date":
+        "Date":
             - is_date
             - []
     column_mapping:
