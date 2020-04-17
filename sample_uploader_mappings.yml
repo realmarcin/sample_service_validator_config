@@ -68,7 +68,7 @@ SESAR:
         "Parent IGSN": 
             - regex_string 
             - []
-        "Release Date": 
+        "Release date":
             - is_date 
             - []
         "Latitude": 
@@ -171,8 +171,8 @@ SESAR:
         -   value: "Size"
             units: "Size unit"
     date_columns:
-        - "Release Date"
-        - "Collection Date"
+        - "Release date"
+        - "Collection date"
 
 ENIGMA:
     basic_columns:

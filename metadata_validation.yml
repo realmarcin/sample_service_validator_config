@@ -931,7 +931,7 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: noop
 
-  Release Date:
+  Release date:
     validators:
     - module: SampleService.core.validator.builtin
       callable-builder: noop
