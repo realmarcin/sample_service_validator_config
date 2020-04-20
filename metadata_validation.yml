@@ -1,12 +1,3 @@
-# Example:
-# metadatakey:
-#   validators:
-#
-#       callable-builder: units
-#       parameters:
-#         key: units
-#         units: mg/L
-
 validators:
   AODC (cells/g):
     validators:
@@ -56,8 +47,7 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-      
-        float: type
+        type: float
         key: value
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -107,7 +97,7 @@ validators:
       callable-builder: number
       parameters:
       
-        float: type
+        type: float
         gte: 0.0
         key: value
     - module: SampleService.core.validator.builtin
@@ -317,7 +307,7 @@ validators:
       callable-builder: number
       parameters:
         key: value
-        type: floats
+        type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
@@ -428,7 +418,6 @@ validators:
     validators:
     - module: SampleService.core.validator.builtin
       callable-builder: noop
-    - module: SampleService.core.validator.bu
 
   Filter (micron):
     validators:
@@ -496,7 +485,8 @@ validators:
       callable-builder: noop
 
   Id:
-    key_metadata: description
+    key_metadata:
+      description: Unique identifier for the Sample 
     validators:
     - module: SampleService.core.validator.builtin
       callable-builder: string
@@ -1047,7 +1037,6 @@ validators:
       callable-builder: number
       parameters:
         key: value
-      
         required: true
         type: float
 
