@@ -9,13 +9,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: year
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
         gte: 0
-        key: value
+        keys: value
         type: float
 
   Age (min):
@@ -23,13 +23,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: years
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
         gte: 0
-        key: value
+        keys: value
         type: float
 
   Aquifer:
@@ -48,11 +48,11 @@ validators:
       callable-builder: number
       parameters:
         type: float
-        key: value
+        keys: value
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   BONCAT Activity (cell/g):
@@ -65,12 +65,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: mg/g
 
   Biome:
@@ -83,12 +83,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Boring Diameter (in):
@@ -96,14 +96,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-      
         type: float
         gte: 0.0
-        key: value
+        keys: value
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: in
 
   Boring Refusal:
@@ -181,12 +180,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: mS/cm
 
   Continent:
@@ -229,12 +228,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ng
 
   Date:
@@ -247,7 +246,7 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
 
   Depth (cm bgs):
@@ -255,12 +254,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: cm bgs
 
   Depth in Core (max):
@@ -268,12 +267,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: meters
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         required: true
         type: float
 
@@ -282,12 +281,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: meters
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         required: true
         type: float
 
@@ -306,12 +305,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Drive Casing ID (in):
@@ -329,12 +328,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Drive Casing Type:
@@ -347,12 +346,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: m
 
   Elevation:
@@ -365,12 +364,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: meters
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
       
         required: true
         type: float
@@ -380,12 +379,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: meters
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         required: true
         type: float
 
@@ -424,12 +423,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: micron
 
   Fraction:
@@ -452,13 +451,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: year * 1000000
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
         gte: 0
-        key: value
+        keys: value
         type: float
 
   Geological Zone:
@@ -471,12 +470,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   IGSN:
@@ -503,13 +502,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: degrees
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
         gte: -90.0
-        key: value
+        keys: value
         lte: 90.0
         type: float
 
@@ -558,13 +557,13 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: degrees
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
         gte: -180.0
-        key: value
+        keys: value
         lte: 180.0
         type: float
 
@@ -573,12 +572,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Lower Seal Start Depth (ft BGS):
@@ -586,12 +585,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Lower Seal Type (ft BGS):
@@ -614,12 +613,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   Method:
@@ -632,12 +631,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   Moisture (%):
@@ -646,7 +645,7 @@ validators:
       callable-builder: number
       parameters:
         gte: 0.0
-        key: value
+        keys: value
         lte: 100.0
         type: float
 
@@ -674,12 +673,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: m
 
   Open:
@@ -692,12 +691,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Open Casing ID (in):
@@ -720,12 +719,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Open Hole Diameter (in):
@@ -734,12 +733,12 @@ validators:
       callable-builder: number
       parameters:
         gte: 0.0
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Open Interval Diameter (in):
@@ -752,12 +751,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Open Interval Start Depth (ft BGS):
@@ -765,12 +764,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Organic Carbon (mg/g dry weight):
@@ -809,13 +808,13 @@ validators:
       callable-builder: number
       parameters:
         gte: -10.0
-        key: value
+        keys: value
         lte: 20.0
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: pH
 
   Packing Depth End (ft BGS):
@@ -823,12 +822,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Packing Depth Start (ft BGS):
@@ -836,12 +835,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Packing Type:
@@ -862,6 +861,7 @@ validators:
       callable-builder: string
       parameters:
         max-len: 120
+        keys: value
 
   Platform name:
     validators:
@@ -878,12 +878,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: microliters
 
   Primary physiographic feature:
@@ -956,12 +956,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   Screen End Depth (ft BGS):
@@ -969,12 +969,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Screen Start Depth (ft BGS):
@@ -982,12 +982,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Screen Top Elevation (ft AMSL):
@@ -995,12 +995,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   Screen Type:
@@ -1018,12 +1018,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft
 
   Size:
@@ -1031,12 +1031,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         units: m^3
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         required: true
         type: float
 
@@ -1055,12 +1055,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: Celsius
 
   Time:
@@ -1083,12 +1083,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft AMSL
 
   Top of Casing Stickup (ft):
@@ -1096,12 +1096,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft
 
   TopofFreshBedrock (ft BGS):
@@ -1109,12 +1109,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   TopofWeatheredBedrock (ft BGS):
@@ -1122,12 +1122,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Total Carbon (mg/g dry weight):
@@ -1155,12 +1155,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Upper Seal Start Depth (ft BGS):
@@ -1168,12 +1168,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Upper Seal Type:
@@ -1196,12 +1196,12 @@ validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
       parameters:
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: ft BGS
 
   Well Casing ID (in):
@@ -1215,12 +1215,12 @@ validators:
       callable-builder: number
       parameters:
         gte: 0.0
-        key: value
+        keys: value
         type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
-        key: units
+        keys: units
         value: in
 
   Well Casing Type:
