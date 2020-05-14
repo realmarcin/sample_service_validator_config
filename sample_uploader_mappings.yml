@@ -2,11 +2,11 @@
 
 # fields shared with current accepted file upload formats (ENIGMA + SESAR)
 shared_fields:
-    - "id"
-    - "name"
-    - "well"
-    - "depth"
-    - "elevation"
+    - "Id"
+    - "Name"
+    - "Well"
+    - "Depth"
+    - "Elevation"
     - "Date"
     - "Time"
     - "Timezone"
@@ -131,9 +131,9 @@ SESAR:
             - is_date 
             - []
     column_mapping:
-        "Sample Name": "name"
-        "IGSN": "id"
-        "Parent IGSN": "parent_id"
+        "Sample Name": "Name"
+        "IGSN": "Id"
+        "Parent IGSN": "Parent_id"
     groups:
         -   value: "Elevation start"
             units: "Elevation unit"
@@ -323,8 +323,8 @@ ENIGMA:
             - is_date
             - []
     column_mapping:
-        "SampleID": "id"
-        "Well Name": "parent_id"
+        "SampleID": "Id"
+        "Well Name": "Parent_id"
     date_columns:
         - "Date"
     column_unit_regex:
