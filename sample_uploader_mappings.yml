@@ -329,6 +329,12 @@ ENIGMA:
     column_mapping:
         "SampleID": "Id"
         "Well Name": "Parent_id"
+    groups:
+        -   value: "Latitude"
+            units: "str:degrees"
+
+        -   value: "Longitude"
+            units: "str:degrees"
     date_columns:
         - "Date"
     column_unit_regex:
