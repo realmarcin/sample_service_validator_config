@@ -273,13 +273,6 @@ validators:
       callable-builder: noop
 
   Depth:
-    validators:
-    - module: SampleService.core.validator.builtin
-      callable-builder: number
-      parameters:
-        keys: value
-
-  Depth:
     key_metadata:
       description: units in centimeters below ground surface (cm BGS)
     validators:
