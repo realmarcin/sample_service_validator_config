@@ -8,7 +8,6 @@ validators:
       parameters:
         gte: 0.0
         keys: value
-        type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
@@ -77,9 +76,8 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
-    - module:
+    - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
         key: units
@@ -93,7 +91,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -354,7 +351,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -371,7 +367,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -644,7 +639,6 @@ validators:
   Lower Seal Start Depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      )
     validators:
     - module: SampleService.core.validator.builtin
       callable-builder: number
@@ -716,7 +710,6 @@ validators:
         gte: 0.0
         keys: value
         lte: 100.0
-        type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
@@ -783,7 +776,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -799,7 +791,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -849,7 +840,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -894,7 +884,6 @@ validators:
       parameters:
         keys: value
         gte: 0.0
-        type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
@@ -1190,7 +1179,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
     - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
@@ -1276,9 +1264,8 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
-    - module:
+    - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
         key: units
@@ -1293,9 +1280,8 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
-    - module:
+    - module: SampleService.core.validator.builtin
       callable-builder: units
       parameters:
         key: units
@@ -1376,7 +1362,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
@@ -1392,7 +1377,6 @@ validators:
       callable-builder: number
       parameters:
         keys: value
-        type: float
         gte: 0.0
     - module: SampleService.core.validator.builtin
       callable-builder: units
