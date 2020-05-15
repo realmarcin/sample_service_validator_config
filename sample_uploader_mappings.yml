@@ -1,6 +1,7 @@
 # spec file
 
 # fields shared with current accepted file upload formats (ENIGMA + SESAR)
+# currently, these are the fields that are uploaded as controlled metadata
 shared_fields:
     - "Id"
     - "Name"
@@ -13,6 +14,9 @@ shared_fields:
     - "Material"
     - "Env_pakcage"
     - "Description"
+    - "Latitude"
+    - "Longitude"
+    - "Country"
 
 # for the verification_mapping only fields that have verifiers that are not just "is_string"
 
