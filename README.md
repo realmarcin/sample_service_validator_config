@@ -6,6 +6,11 @@ See that repo for more documentation on the configuration.
 
 This repository is for configuration files for the validation functions of the SampleService and related applications, including the samples_uploader
 
-## Field conventions
+## Metadata key field conventions
+	- All fields are lower case
+	- spaces are replaced with "_".
 
-- All fields should be capitalized.
+## metadata validation
+	the "key_metadata" field in each validator contains information about the field.
+	all fields must contain a `display-name` field which should be used when a human-readable version of the field is necessary. A field `description` can be optionally provided with any clarifying information, including expected units.
+
