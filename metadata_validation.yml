@@ -1,32 +1,31 @@
 validators:
-
-  age_(max):
+  age_max:
     key_metadata:
       description: units in years
-      display-name: Age (max)
+      display_name: Age (max)
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: years
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0
         keys: value
 
-  age_(min):
+  age_min:
     key_metadata:
       description: units in years
-      display-name: Age (min)
+      display_name: Age (min)
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: years
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0
@@ -35,14 +34,14 @@ validators:
   aodc:
     key_metadata:
       description: units in cells per gram
-      display-name: AODC
+      display_name: AODC
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -50,27 +49,28 @@ validators:
 
   aquifer:
     key_metadata:
-      display-name: Aquifer
+      display_name: Aquifer
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
+
   area_name:
     key_metadata:
-      display-name: Area Name
+      display_name: Area Name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   average_water_level:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Average Water Level
+      display_name: Average Water Level
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -79,14 +79,14 @@ validators:
   biomass_carbon:
     key_metadata:
       description: units in milligrams per gram
-      display-name: Biomass Carbon
+      display_name: Biomass Carbon
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -94,22 +94,22 @@ validators:
 
   biome:
     key_metadata:
-      display-name: Biome
+      display_name: Biome
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   boncat_activity:
     key_metadata:
       description: units in cells per gram
-      display-name: BONCAT Activity
+      display_name: BONCAT Activity
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -118,13 +118,13 @@ validators:
   boring:
     key_metadata:
       description: units in ft below groud surface (ft BGS)
-      display-name: Boring
+      display_name: Boring
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -133,14 +133,14 @@ validators:
   boring_diameter:
     key_metadata:
       description: units in inches
-      display-name: Boring Diameter
+      display_name: Boring Diameter
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -148,105 +148,105 @@ validators:
 
   boring_refusal:
     key_metadata:
-      display-name: Boring Refusal
+      display_name: Boring Refusal
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  city/township:
+  city_township:
     key_metadata:
-      display-name: City/Township
+      display_name: City/Township
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   classification:
     key_metadata:
-      display-name: Classification
+      display_name: Classification
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collection_date:
     key_metadata:
-      display-name: Collection date
+      display_name: Collection date
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  collection_date_(end):
+  collection_date_end:
     key_metadata:
-      display-name: Collection date (end)
+      display_name: Collection date (end)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collection_date_precision:
     key_metadata:
-      display-name: Collection date precision
+      display_name: Collection date precision
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collection_method:
     key_metadata:
-      display-name: Collection method
+      display_name: Collection method
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collection_method_description:
     key_metadata:
-      display-name: Collection method description
+      display_name: Collection method description
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collection_time:
     key_metadata:
-      display-name: Collection time
+      display_name: Collection time
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  collection_time_(end):
+  collection_time_end:
     key_metadata:
-      display-name: Collection time (end)
+      display_name: Collection time (end)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  collector/chief_scientist:
+  collector_chief_scientist:
     key_metadata:
-      display-name: Collector/Chief Scientist
+      display_name: Collector/Chief Scientist
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  collector/chief_scientist_address:
+  collector_chief_scientist_address:
     key_metadata:
-      display-name: Collector/Chief Scientist Address
+      display_name: Collector/Chief Scientist Address
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   condition:
     key_metadata:
-      display-name: Condition
+      display_name: Condition
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   conductivity:
     key_metadata:
       description: units in millisiemens per centimeter
-      display-name: Conductivity
+      display_name: Conductivity
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -254,101 +254,101 @@ validators:
 
   continent:
     key_metadata:
-      display-name: Continent
+      display_name: Continent
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   coordinate_precision?:
     key_metadata:
-      display-name: Coordinate Precision?
+      display_name: Coordinate Precision?
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   country:
     key_metadata:
-      display-name: Country
+      display_name: Country
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   county:
     key_metadata:
-      display-name: County
+      display_name: County
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   current_archive:
     key_metadata:
-      display-name: Current archive
+      display_name: Current archive
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   current_archive_contact:
     key_metadata:
-      display-name: Current archive contact
+      display_name: Current archive contact
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   dapi_cell_count:
     key_metadata:
       description: units in cells per gram
-      display-name: DAPI Cell Count
+      display_name: DAPI Cell Count
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   date:
     key_metadata:
-      display-name: Date
+      display_name: Date
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   depth:
     key_metadata:
       description: units in centimeters below ground surface (cm BGS)
-      display-name: Depth
+      display_name: Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: cm
 
-  depth_in_core_(max):
+  depth_in_core_max:
     key_metadata:
-      display-name: Depth in Core (max)
+      display_name: Depth in Core (max)
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: meters
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
         required: true
 
-  depth_in_core_(min):
+  depth_in_core_min:
     key_metadata:
-      display-name: Depth in Core (min)
+      display_name: Depth in Core (min)
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: meters
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
@@ -356,28 +356,28 @@ validators:
 
   depth_scale:
     key_metadata:
-      display-name: Depth scale
+      display_name: Depth scale
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   description:
     key_metadata:
-      display-name: Description
+      display_name: Description
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   dna_picogreen_total:
     key_metadata:
       description: units in nanograms
-      display-name: DNA Picogreen Total
+      display_name: DNA Picogreen Total
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -386,13 +386,13 @@ validators:
   drive_casing_end_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Drive Casing End Depth
+      display_name: Drive Casing End Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -401,14 +401,14 @@ validators:
   drive_casing_id:
     key_metadata:
       description: drive casing inner diameter. units in inches
-      display-name: Drive Casing ID
+      display_name: Drive Casing ID
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -417,14 +417,14 @@ validators:
   drive_casing_od:
     key_metadata:
       description: drive casing outer diameter. units in inches
-      display-name: Drive Casing OD
+      display_name: Drive Casing OD
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -433,13 +433,13 @@ validators:
   drive_casing_start_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Drive Casing Start Depth
+      display_name: Drive Casing Start Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -447,21 +447,21 @@ validators:
 
   drive_casing_type:
     key_metadata:
-      display-name: Drive Casing Type
+      display_name: Drive Casing Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   easting:
     key_metadata:
       description: units in meters
-      display-name: Easting
+      display_name: Easting
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -469,21 +469,21 @@ validators:
 
   elevation:
     key_metadata:
-      display-name: Elevation
+      display_name: Elevation
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   elevation_end:
     key_metadata:
-      display-name: Elevation end
+      display_name: Elevation end
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: meters
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
@@ -491,14 +491,14 @@ validators:
 
   elevation_start:
     key_metadata:
-      display-name: Elevation start
+      display_name: Elevation start
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: meters
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
@@ -506,56 +506,56 @@ validators:
 
   env_package:
     key_metadata:
-      display-name: Env_package
+      display_name: Env_package
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   environmental_package:
     key_metadata:
-      display-name: Environmental Package
+      display_name: Environmental Package
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   experiment_name:
     key_metadata:
-      display-name: Experiment Name
+      display_name: Experiment Name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   feature:
     key_metadata:
-      display-name: Feature
+      display_name: Feature
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  field_name_(informal_classification):
+  field_name_informal_classification:
     key_metadata:
-      display-name: Field name (informal classification)
+      display_name: Field name (informal classification)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  field_program/cruise:
+  field_program_cruise:
     key_metadata:
-      display-name: Field program/cruise
+      display_name: Field program/cruise
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   filter:
     key_metadata:
       description: units in microns
-      display-name: Filter
+      display_name: Filter
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -563,35 +563,35 @@ validators:
 
   fraction:
     key_metadata:
-      display-name: Fraction
+      display_name: Fraction
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  fractures/cavities/waterbreaks:
+  fractures_cavities_waterbreaks:
     key_metadata:
-      display-name: Fractures/Cavities/WaterBreaks
+      display_name: Fractures/Cavities/WaterBreaks
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   functional_area:
     key_metadata:
-      display-name: Functional Area
+      display_name: Functional Area
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   geological_age:
     key_metadata:
-      display-name: Geological Age
+      display_name: Geological Age
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: year * 1000000
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0
@@ -599,21 +599,21 @@ validators:
 
   geological_zone:
     key_metadata:
-      display-name: Geological Zone
+      display_name: Geological Zone
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   ground_elevation:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Ground Elevation
+      display_name: Ground Elevation
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -622,38 +622,38 @@ validators:
   id:
     key_metadata:
       description: Unique identifier for the Sample
-      display-name: Id
+      display_name: Id
     validators:
-    - callable-builder: string
+    - callable_builder: string
       module: SampleService.core.validator.builtin
       parameters:
         max-len: 120
 
   igsn:
     key_metadata:
-      display-name: IGSN
+      display_name: IGSN
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   installation_method:
     key_metadata:
-      display-name: Installation Method
+      display_name: Installation Method
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   latitude:
     key_metadata:
       description: units in degrees
-      display-name: Latitude
+      display_name: Latitude
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: degrees
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: -90.0
@@ -662,58 +662,58 @@ validators:
 
   launch_id:
     key_metadata:
-      display-name: Launch ID
+      display_name: Launch ID
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   launch_platform_name:
     key_metadata:
-      display-name: Launch platform name
+      display_name: Launch platform name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  leucine_activity_(ngc/day_cell):
+  leucine_activity_ngc_day_cell:
     key_metadata:
       description: units in ngC/day cell
-      display-name: Leucine Activity (ngC/day cell)
+      display_name: Leucine Activity (ngC/day cell)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   locality:
     key_metadata:
-      display-name: Locality
+      display_name: Locality
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   locality_description:
     key_metadata:
-      display-name: Locality description
+      display_name: Locality description
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   location_description:
     key_metadata:
-      display-name: Location description
+      display_name: Location description
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   longitude:
     key_metadata:
       description: units in degrees
-      display-name: Longitude
+      display_name: Longitude
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: degrees
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: -180.0
@@ -723,13 +723,13 @@ validators:
   lower_seal_end_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Lower Seal End Depth
+      display_name: Lower Seal End Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -738,13 +738,13 @@ validators:
   lower_seal_start_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Lower Seal Start Depth
+      display_name: Lower Seal Start Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -753,35 +753,35 @@ validators:
   lower_seal_type:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Lower Seal Type
+      display_name: Lower Seal Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   material:
     key_metadata:
-      display-name: Material
+      display_name: Material
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   maturation_time:
     key_metadata:
-      display-name: Maturation Time
+      display_name: Maturation Time
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   max_water_level:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Max Water Level
+      display_name: Max Water Level
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -789,21 +789,21 @@ validators:
 
   method:
     key_metadata:
-      display-name: Method
+      display_name: Method
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   min_water_level:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Min Water Level
+      display_name: Min Water Level
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -812,15 +812,15 @@ validators:
   moisture:
     key_metadata:
       description: percent moisture
-      display-name: Moisture
+      display_name: Moisture
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
         lte: 100.0
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -829,37 +829,37 @@ validators:
   name:
     key_metadata:
       description: name validator
-      display-name: Name
+      display_name: Name
     validators:
-    - callable-builder: string
+    - callable_builder: string
       module: SampleService.core.validator.builtin
       parameters:
         max-len: 120
 
   name_of_physiographic_feature:
     key_metadata:
-      display-name: Name of physiographic feature
+      display_name: Name of physiographic feature
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   navigation_type:
     key_metadata:
-      display-name: Navigation type
+      display_name: Navigation type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   northing:
     key_metadata:
       description: units in meters
-      display-name: Northing
+      display_name: Northing
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -867,21 +867,21 @@ validators:
 
   open:
     key_metadata:
-      display-name: Open
+      display_name: Open
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   open_casing_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Open Casing Depth
+      display_name: Open Casing Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -890,14 +890,14 @@ validators:
   open_casing_id:
     key_metadata:
       description: open casing inner diameter. units in inches (in)
-      display-name: Open Casing ID
+      display_name: Open Casing ID
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -906,14 +906,14 @@ validators:
   open_casing_od:
     key_metadata:
       description: open casing outer diameter. units in inches (in)
-      display-name: Open Casing OD
+      display_name: Open Casing OD
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -921,21 +921,21 @@ validators:
 
   open_casing_type:
     key_metadata:
-      display-name: Open Casing Type
+      display_name: Open Casing Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   open_hole_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Open Hole Depth
+      display_name: Open Hole Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -944,14 +944,14 @@ validators:
   open_hole_diameter:
     key_metadata:
       description: units in inches
-      display-name: Open Hole Diameter
+      display_name: Open Hole Diameter
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -960,14 +960,14 @@ validators:
   open_interval_diameter:
     key_metadata:
       description: units in inches
-      display-name: Open Interval Diameter
+      display_name: Open Interval Diameter
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -976,13 +976,13 @@ validators:
   open_interval_end_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Open Interval End Depth
+      display_name: Open Interval End Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -991,13 +991,13 @@ validators:
   open_interval_start_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Open Interval Start Depth
+      display_name: Open Interval Start Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1006,14 +1006,14 @@ validators:
   organic_carbon:
     key_metadata:
       description: units in milligrams per gram dry weight
-      display-name: Organic Carbon
+      display_name: Organic Carbon
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1021,49 +1021,49 @@ validators:
 
   original_archive:
     key_metadata:
-      display-name: Original archive
+      display_name: Original archive
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   original_archive_contact:
     key_metadata:
-      display-name: Original archive contact
+      display_name: Original archive contact
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  origination_or_plug/abandon:
+  origination_or_plug_abandon:
     key_metadata:
-      display-name: Origination or Plug/Abandon
+      display_name: Origination or Plug/Abandon
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   other_name:
     key_metadata:
-      display-name: Other Name
+      display_name: Other Name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  other_name(s):
+  other_names:
     key_metadata:
-      display-name: Other name(s)
+      display_name: Other name(s)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   packing_depth_end:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Packing Depth End
+      display_name: Packing Depth End
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1072,13 +1072,13 @@ validators:
   packing_depth_start:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Packing Depth Start
+      display_name: Packing Depth Start
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1086,17 +1086,17 @@ validators:
 
   packing_type:
     key_metadata:
-      display-name: Packing Type
+      display_name: Packing Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   parent_id:
     key_metadata:
       description: id field of parent
-      display-name: Parent_id
+      display_name: Parent_id
     validators:
-    - callable-builder: string
+    - callable_builder: string
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
@@ -1104,23 +1104,23 @@ validators:
 
   parent_igsn:
     key_metadata:
-      display-name: Parent IGSN
+      display_name: Parent IGSN
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   ph:
     key_metadata:
       description: pH of sample
-      display-name: Ph
+      display_name: Ph
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: -10.0
         keys: value
         lte: 20.0
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1128,28 +1128,28 @@ validators:
 
   platform_name:
     key_metadata:
-      display-name: Platform name
+      display_name: Platform name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   platform_type:
     key_metadata:
-      display-name: Platform type
+      display_name: Platform type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   pore_water_extraction:
     key_metadata:
       description: units in microliters
-      display-name: Pore Water Extraction
+      display_name: Pore Water Extraction
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1157,105 +1157,105 @@ validators:
 
   primary_physiographic_feature:
     key_metadata:
-      display-name: Primary physiographic feature
+      display_name: Primary physiographic feature
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   purpose:
     key_metadata:
-      display-name: Purpose
+      display_name: Purpose
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   recovery_factor:
     key_metadata:
-      display-name: Recovery Factor
+      display_name: Recovery Factor
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  redox_potential_(?):
+  redox_potential_?:
     key_metadata:
-      display-name: Redox Potential  (?)
+      display_name: Redox Potential  (?)
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   region:
     key_metadata:
-      display-name: Region
+      display_name: Region
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   related_identifiers:
     key_metadata:
-      display-name: Related Identifiers
+      display_name: Related Identifiers
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   relation_type:
     key_metadata:
-      display-name: Relation Type
+      display_name: Relation Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   release_date:
     key_metadata:
-      display-name: Release date
+      display_name: Release date
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   replicate:
     key_metadata:
-      display-name: Replicate
+      display_name: Replicate
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   rock_formation:
     key_metadata:
-      display-name: Rock Formation
+      display_name: Rock Formation
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   sample_description:
     key_metadata:
-      display-name: Sample Description
+      display_name: Sample Description
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   sample_name:
     key_metadata:
-      display-name: Sample Name
+      display_name: Sample Name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   sampleid:
     key_metadata:
-      display-name: SampleID
+      display_name: SampleID
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   screen_bottom_elevation:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Screen Bottom Elevation
+      display_name: Screen Bottom Elevation
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1264,13 +1264,13 @@ validators:
   screen_end_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Screen End Depth
+      display_name: Screen End Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1279,13 +1279,13 @@ validators:
   screen_start_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Screen Start Depth
+      display_name: Screen Start Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1294,13 +1294,13 @@ validators:
   screen_top_elevation:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Screen Top Elevation
+      display_name: Screen Top Elevation
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1308,28 +1308,28 @@ validators:
 
   screen_type:
     key_metadata:
-      display-name: Screen Type
+      display_name: Screen Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   screened:
     key_metadata:
-      display-name: Screened
+      display_name: Screened
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   screened_interval:
     key_metadata:
       description: units in ft
-      display-name: Screened Interval
+      display_name: Screened Interval
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1338,42 +1338,42 @@ validators:
   size:
     key_metadata:
       description: units in meters cubed
-      display-name: Size
+      display_name: Size
     validators:
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
         units: m^3
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
         required: true
 
-  state/province:
+  state_province:
     key_metadata:
-      display-name: State/Province
+      display_name: State/Province
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   sub-object_type:
     key_metadata:
-      display-name: Sub-object type
+      display_name: Sub-object type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   temperature:
     key_metadata:
-      display-name: Temperature
+      display_name: Temperature
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1381,35 +1381,35 @@ validators:
 
   time:
     key_metadata:
-      display-name: Time
+      display_name: Time
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   time_zone:
     key_metadata:
-      display-name: Time Zone
+      display_name: Time Zone
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   timezone:
     key_metadata:
-      display-name: Timezone
+      display_name: Timezone
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   top_of_casing_elevation:
     key_metadata:
       description: units in ft above mean sea level (ft AMSL)
-      display-name: Top of Casing Elevation
+      display_name: Top of Casing Elevation
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1418,13 +1418,13 @@ validators:
   top_of_casing_stickup:
     key_metadata:
       description: units in ft
-      display-name: Top of Casing Stickup
+      display_name: Top of Casing Stickup
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1433,13 +1433,13 @@ validators:
   top_of_fresh_bedrock:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Top of Fresh Bedrock
+      display_name: Top of Fresh Bedrock
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1448,13 +1448,13 @@ validators:
   top_of_weathered_bedrock:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Top of Weathered Bedrock
+      display_name: Top of Weathered Bedrock
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1463,14 +1463,14 @@ validators:
   total_carbon:
     key_metadata:
       description: units in milligrams per gram dry weight
-      display-name: Total Carbon
+      display_name: Total Carbon
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1479,14 +1479,14 @@ validators:
   total_nitrogen:
     key_metadata:
       description: units in milligrams per gram dry weight
-      display-name: Total Nitrogen
+      display_name: Total Nitrogen
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1494,28 +1494,28 @@ validators:
 
   treatment:
     key_metadata:
-      display-name: Treatment
+      display_name: Treatment
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   type_of_well:
     key_metadata:
-      display-name: Type of Well
+      display_name: Type of Well
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   upper_seal_end_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Upper Seal End Depth
+      display_name: Upper Seal End Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1524,13 +1524,13 @@ validators:
   upper_seal_start_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Upper Seal Start Depth
+      display_name: Upper Seal Start Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1538,35 +1538,35 @@ validators:
 
   upper_seal_type:
     key_metadata:
-      display-name: Upper Seal Type
+      display_name: Upper Seal Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   vertical_datum:
     key_metadata:
-      display-name: Vertical Datum
+      display_name: Vertical Datum
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   well:
     key_metadata:
-      display-name: Well
+      display_name: Well
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   well_casing_depth:
     key_metadata:
       description: units in ft below ground surface (ft BGS)
-      display-name: Well Casing Depth
+      display_name: Well Casing Depth
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1575,14 +1575,14 @@ validators:
   well_casing_id:
     key_metadata:
       description: well casing inner diameter. units in inches
-      display-name: Well Casing ID
+      display_name: Well Casing ID
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1591,14 +1591,14 @@ validators:
   well_casing_od:
     key_metadata:
       description: well casing outer diameter. units in inches
-      display-name: Well Casing OD
+      display_name: Well Casing OD
     validators:
-    - callable-builder: number
+    - callable_builder: number
       module: SampleService.core.validator.builtin
       parameters:
         gte: 0.0
         keys: value
-    - callable-builder: units
+    - callable_builder: units
       module: SampleService.core.validator.builtin
       parameters:
         key: units
@@ -1606,28 +1606,28 @@ validators:
 
   well_casing_type:
     key_metadata:
-      display-name: Well Casing Type
+      display_name: Well Casing Type
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   well_name:
     key_metadata:
-      display-name: Well Name
+      display_name: Well Name
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   well_status:
     key_metadata:
-      display-name: Well Status
+      display_name: Well Status
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   zone:
     key_metadata:
-      display-name: Zone
+      display_name: Zone
     validators:
-    - callable-builder: noop
+    - callable_builder: noop
       module: SampleService.core.validator.builtin

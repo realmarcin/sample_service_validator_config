@@ -13,4 +13,3 @@ This repository is for configuration files for the validation functions of the S
 ## metadata validation
 	the "key_metadata" field in each validator contains information about the field.
 	all fields must contain a `display-name` field which should be used when a human-readable version of the field is necessary. A field `description` can be optionally provided with any clarifying information, including expected units.
-

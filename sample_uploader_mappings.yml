@@ -24,7 +24,7 @@ SESAR:
     basic_columns:
         - sample_name
         - material
-        - field_name_(informal_classification)
+        - field_name_informal_classification
         - location_description
         - locality_description
         - collection_method
@@ -32,44 +32,44 @@ SESAR:
         - navigation_type
         - primary_physiographic_feature
         - name_of_physiographic_feature
-        - field_program/cruise
-        - collector/chief_scientist
+        - field_program_cruise
+        - collector_chief_scientist
         - collection_date_precision
         - current_archive
         - related_identifiers
         - platform_type
         - location_description
         - zone
-        - state/province
+        - state_province
         - original_archive_contact
         - classification
         - vertical_datum
         - original_archive
         - platform_name
-        - collection_time_(end)
+        - collection_time_end
         - county
         - size_unit
         - age_unit
         - locality
         - sample_description
         - collection_method_description
-        - other_name(s)
+        - other_names
         - geological_unit
-        - collector/chief_scientist_address
+        - collector_chief_scientist_address
         - collection_time
         - locality_description
         - size
         - launch_platform_name
         - depth_scale
         - country
-        - city/township
+        - city_township
         - sub-object_type
         - launch_id
     column_mapping:
         igsn: id
         parent_igsn: parent_id
         sample_name: name
-    date_columns:
+    date_columns: 
         - collection_date
     groups:
         -   units: elevation_unit
@@ -81,32 +81,32 @@ SESAR:
         -   units: str:degrees
             value: longitude
         -   units: age_unit
-            value: age_(min)
+            value: age_min
         -   units: age_unit
-            value: age_(max)
+            value: age_max
         -   units: geological_unit
             value: geological_age
         -   units: collection_date_precision
-            value: collection_date_(end)
+            value: collection_date_end
         -   units: elevation_unit
             value: elevation_end
         -   units: depth_scale
-            value: depth_in_core_(max)
+            value: depth_in_core_max
         -   units: depth_scale
-            value: depth_in_core_(min)
+            value: depth_in_core_min
         -   units: size_unit
             value: size
     verification_mapping:
-        age_(max):
+        age_max:
             - is_numeric
             - []
-        age_(min):
+        age_min:
             - is_numeric
             - []
         collection_date:
             - is_date
             - []
-        collection_date_(end):
+        collection_date_end:
             - is_date
             - []
         coordinate_precision?:
@@ -115,13 +115,13 @@ SESAR:
         current_archive_contact:
             - is_email
             - []
-        depth_in_core_(max):
+        depth_in_core_max:
             - is_numeric
             - []
-        depth_in_core_(min):
+        depth_in_core_min:
             - is_numeric
             - []
-        easting_(m):
+        easting_m:
             - is_numeric
             - []
         elevation_end:
@@ -142,16 +142,16 @@ SESAR:
         latitude:
             - is_numeric
             - []
-        latitude_(end):
+        latitude_end:
             - is_numeric
             - []
         longitude:
             - is_numeric
             - []
-        longitude_(end):
+        longitude_end:
             - is_numeric
             - []
-        northing_(m):
+        northing_m:
             - is_numeric
             - []
         parent_igsn:
@@ -162,8 +162,8 @@ SESAR:
             - - - grouped
                     - co-located
         release_date:
-            - is_date
-            - []
+        - is_date
+        - []
 
 ENIGMA:
     basic_columns:
@@ -184,64 +184,64 @@ ENIGMA:
         - replicate
         - maturation_time
         - treatment
-        - temperature_(celsius)
-        - moisture_(%)
-        - pore_water_extraction_(microliters)
-        - conductivity_(ms/cm)
+        - temperature_celsius
+        - moisture_%
+        - pore_water_extraction_microliters
+        - conductivity_ms_cm
         - ph
-        - dapi_cell_count_(cells/g)
-        - dna_picogreen_total_(ng)
-        - total_carbon_(mg/g_dry_weight)
-        - biomass_carbon_(mg/g)
-        - total_nitrogen_(mg/g_dry_weight)
-        - leucine_activity_(ngc/day_cell}
+        - dapi_cell_count_cells_g
+        - dna_picogreen_total_ng
+        - total_carbon_mg_g_dry_weight
+        - biomass_carbon_mg_g
+        - total_nitrogen_mg_g_dry_weight
+        - leucine_activity_ngc_day_cell}
         - functional_area
         - type_of_well
-        - ground_elevation_(ft_amsl)
+        - ground_elevation_ft_amsl
         - installation_method
-        - boring_(ft_bgs)
+        - boring_ft_bgs
         - boring_refusal
-        - boring_diameter_(in)
+        - boring_diameter_in
         - screen_type
         - well_casing_type
-        - well_casing_od_(in)
-        - well_casing_id_(in)
+        - well_casing_od_in
+        - well_casing_id_in
         - drive_casing_type
-        - drive_casing_id_(in)
-        - drive_casing_od_(in)
-        - drive_casing_start_depth_(ft_bgs)
-        - drive_casing_end_depth_(ft_bgs)
+        - drive_casing_id_in
+        - drive_casing_od_in
+        - drive_casing_start_depth_ft_bgs
+        - drive_casing_end_depth_ft_bgs
         - packing_type
-        - packing_depth_start_(ft_bgs)
-        - packing_depth_end_(ft_bgs)
-        - topofweatheredbedrock_(ft_bgs)
-        - topoffreshbedrock_(ft_bgs)
+        - packing_depth_start_ft_bgs
+        - packing_depth_end_ft_bgs
+        - topofweatheredbedrock_ft_bgs
+        - topoffreshbedrock_ft_bgs
         - aquifer
-        - fractures/cavities/waterbreaks
+        - fractures_cavities_waterbreaks
         - other_name
         - screened
         - open
         - well_status
         - condition
-        - origination_or_plug/abandon
-        - min_water_level_(ft_amsl)
-        - average_water_level_(ft_amsl)
-        - max_water_level_(ft_amsl)
-        -   upper_seal_type
-        -   upper_seal_start_depth_(ft_bgs)
-        -   upper_seal_end_depth_(ft_bgs)
-        - lower_seal_type_(ft_bgs)
-        - lower_seal_start_depth_(ft_bgs)
-        - lower_seal_end_depth_(ft_bgs)
+        - origination_or_plug_abandon
+        - min_water_level_ft_amsl
+        - average_water_level_ft_amsl
+        - max_water_level_ft_amsl
+        - upper_seal_type
+        - upper_seal_start_depth_ft_bgs
+        - upper_seal_end_depth_ft_bgs
+        - lower_seal_type_ft_bgs
+        - lower_seal_start_depth_ft_bgs
+        - lower_seal_end_depth_ft_bgs
         - open_casing_type
-        - open_casing_od_(in)
-        - open_casing_id_(in)
-        - open_casing_depth_(ft_bgs)
-        - open_hole_diameter_(in)
-        - open_hole_depth_(ft_bgs)
-        - open_interval_start_depth_(ft_bgs)
-        - open_interval_end_depth_(ft_bgs)
-        - open_interval_diameter_(in)
+        - open_casing_od_in
+        - open_casing_id_in
+        - open_casing_depth_ft_bgs
+        - open_hole_diameter_in
+        - open_hole_depth_ft_bgs
+        - open_interval_start_depth_ft_bgs
+        - open_interval_end_depth_ft_bgs
+        - open_interval_diameter_in
         - rock_formation
         - depth
         - elevation
@@ -266,19 +266,19 @@ ENIGMA:
         -   units: str:degrees
             value: longitude
     verification_mapping:
-        aodc_(cells/g):
+        aodc_cells_g:
             - is_numeric
             - []
-        boncat_activity_(cell/g):
+        boncat_activity_cell_g:
             - is_numeric
             - []
         date:
             - is_date
             - []
-        depth_(cm_bgs):
+        depth_cm_bgs:
             - is_numeric
             - []
-        filter_(micron):
+        filter_micron:
             - is_numeric
             - []
         latitude:
@@ -287,36 +287,36 @@ ENIGMA:
         longitude:
             - is_numeric
             - []
-        organic_carbon_(mg/g_dry_weight):
+        organic_carbon_mg_g_dry_weight:
             - is_numeric
             - []
         ph:
             - is_numeric
             - []
-        redox_potential_(?):
+        redox_potential_?:
             - is_numeric
             - []
-        screen_bottom_elevation_(ft_amsl):
+        screen_bottom_elevation_ft_amsl:
             - is_numeric
             - []
-        screen_end_depth_(ft_bgs):
+        screen_end_depth_ft_bgs:
             - is_numeric
             - []
-        screen_start_depth_(ft_bgs):
+        screen_start_depth_ft_bgs:
             - is_numeric
             - []
-        screen_top_elevation_(ft_amsl):
+        screen_top_elevation_ft_amsl:
             - is_numeric
             - []
-        screened_interval_(ft):
+        screened_interval_ft:
             - is_numeric
             - []
-        top_of_casing_elevation_(ft_amsl):
+        top_of_casing_elevation_ft_amsl:
             - is_numeric
             - []
-        top_of_casing_stickup_(ft):
+        top_of_casing_stickup_ft:
             - is_numeric
             - []
-        well_casing_depth_(ft_bgs):
+        well_casing_depth_ft_bgs:
             - is_numeric
             - []

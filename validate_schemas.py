@@ -22,11 +22,11 @@ _META_VAL_JSONSCHEMA = {
                             'type': 'object',
                             'properties': {
                                 'module': {'type': 'string'},
-                                'callable-builder': {'type': 'string'},
+                                'callable_builder': {'type': 'string'},
                                 'parameters': {'type': 'object'}
                             },
                             'additionalProperties': False,
-                            'required': ['module', 'callable-builder']
+                            'required': ['module', 'callable_builder']
                         }
 
                     }
