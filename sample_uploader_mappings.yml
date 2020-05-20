@@ -160,7 +160,7 @@ SESAR:
         relation_type:
             - controlled_vocab
             - - - grouped
-                    - co-located
+                - co-located
         release_date:
         - is_date
         - []
