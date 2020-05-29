@@ -1017,7 +1017,7 @@ validators:
       module: SampleService.core.validator.builtin
       parameters:
         key: units
-        units: mg/g dry weight
+        units: mg/g
 
   original_archive:
     key_metadata:
@@ -1474,7 +1474,7 @@ validators:
       module: SampleService.core.validator.builtin
       parameters:
         key: units
-        units: mg/g dry weight
+        units: mg/g
 
   total_nitrogen:
     key_metadata:
@@ -1490,7 +1490,7 @@ validators:
       module: SampleService.core.validator.builtin
       parameters:
         key: units
-        units: mg/g dry weight
+        units: mg/g
 
   treatment:
     key_metadata:
