@@ -824,7 +824,7 @@ validators:
       module: SampleService.core.validator.builtin
       parameters:
         key: units
-        units: \%
+        units: percent
 
   name:
     key_metadata:
