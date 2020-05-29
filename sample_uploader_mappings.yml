@@ -185,7 +185,7 @@ ENIGMA:
         - maturation_time
         - treatment
         - temperature_celsius
-        - moisture_%
+        - moisture
         - pore_water_extraction_microliters
         - conductivity_ms_cm
         - ph
@@ -194,7 +194,7 @@ ENIGMA:
         - total_carbon_mg_g_dry_weight
         - biomass_carbon_mg_g
         - total_nitrogen_mg_g_dry_weight
-        - leucine_activity_ngc_day_cell}
+        - leucine_activity_ngc_day_cell
         - functional_area
         - type_of_well
         - ground_elevation_ft_amsl
