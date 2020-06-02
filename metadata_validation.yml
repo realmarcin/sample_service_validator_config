@@ -1,7 +1,7 @@
 validators:
   age_max:
     key_metadata:
-      description: units in years
+      description: maximum age in years
       display_name: Age (max)
     validators:
     - callable_builder: units
@@ -17,7 +17,7 @@ validators:
 
   age_min:
     key_metadata:
-      description: units in years
+      description: minimum age in years
       display_name: Age (min)
     validators:
     - callable_builder: units
@@ -113,12 +113,12 @@ validators:
       module: SampleService.core.validator.builtin
       parameters:
         key: units
-        units: cell/g
+        units: cells/g
 
   boring:
     key_metadata:
-      description: units in ft below groud surface (ft BGS)
-      display_name: Boring
+      description: boring depth in ft below groud surface (ft BGS)
+      display_name: Boring depth
     validators:
     - callable_builder: number
       module: SampleService.core.validator.builtin
@@ -132,7 +132,7 @@ validators:
 
   boring_diameter:
     key_metadata:
-      description: units in inches
+      description: boring diameter in inches
       display_name: Boring Diameter
     validators:
     - callable_builder: number
@@ -218,14 +218,14 @@ validators:
 
   collector_chief_scientist:
     key_metadata:
-      display_name: Collector/Chief Scientist
+      display_name: Collector/Chief Scientist name
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   collector_chief_scientist_address:
     key_metadata:
-      display_name: Collector/Chief Scientist Address
+      display_name: Collector/Chief Scientist address
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
@@ -239,7 +239,7 @@ validators:
 
   conductivity:
     key_metadata:
-      description: units in millisiemens per centimeter
+      description: conductivity in millisiemens per centimeter
       display_name: Conductivity
     validators:
     - callable_builder: number
@@ -261,7 +261,7 @@ validators:
 
   coordinate_precision?:
     key_metadata:
-      display_name: Coordinate Precision?
+      display_name: Coordinate Precision
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
@@ -289,14 +289,14 @@ validators:
 
   current_archive_contact:
     key_metadata:
-      display_name: Current archive contact
+      display_name: Current archive contact name
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
 
   dapi_cell_count:
     key_metadata:
-      description: units in cells per gram
+      description: DAPI cell count in cells per gram
       display_name: DAPI Cell Count
     validators:
     - callable_builder: noop
@@ -311,7 +311,7 @@ validators:
 
   depth:
     key_metadata:
-      description: units in centimeters below ground surface (cm BGS)
+      description: depth in centimeters below ground surface (cm BGS)
       display_name: Depth
     validators:
     - callable_builder: number
@@ -326,6 +326,7 @@ validators:
 
   depth_in_core_max:
     key_metadata:
+      description: maximum depth in core in meters
       display_name: Depth in Core (max)
     validators:
     - callable_builder: units
@@ -341,6 +342,7 @@ validators:
 
   depth_in_core_min:
     key_metadata:
+      description: minimum depth in core in meters
       display_name: Depth in Core (min)
     validators:
     - callable_builder: units
@@ -385,7 +387,7 @@ validators:
 
   drive_casing_end_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: drive casing end depth in ft below ground surface (ft BGS)
       display_name: Drive Casing End Depth
     validators:
     - callable_builder: number
@@ -400,7 +402,7 @@ validators:
 
   drive_casing_id:
     key_metadata:
-      description: drive casing inner diameter. units in inches
+      description: drive casing inner diameter in inches
       display_name: Drive Casing ID
     validators:
     - callable_builder: number
@@ -416,7 +418,7 @@ validators:
 
   drive_casing_od:
     key_metadata:
-      description: drive casing outer diameter. units in inches
+      description: drive casing outer diameter in inches
       display_name: Drive Casing OD
     validators:
     - callable_builder: number
@@ -454,7 +456,7 @@ validators:
 
   easting:
     key_metadata:
-      description: units in meters
+      description: Easting in meters
       display_name: Easting
     validators:
     - callable_builder: number
@@ -476,6 +478,7 @@ validators:
 
   elevation_end:
     key_metadata:
+      description: Elevation end in meters
       display_name: Elevation end
     validators:
     - callable_builder: units
@@ -492,6 +495,7 @@ validators:
   elevation_start:
     key_metadata:
       display_name: Elevation start
+      description: Elevation start in meters
     validators:
     - callable_builder: units
       module: SampleService.core.validator.builtin
@@ -548,7 +552,7 @@ validators:
 
   filter:
     key_metadata:
-      description: units in microns
+      description: Filter pore size in microns
       display_name: Filter
     validators:
     - callable_builder: number
@@ -584,6 +588,7 @@ validators:
 
   geological_age:
     key_metadata:
+      description: Geological Age in years * 1000000
       display_name: Geological Age
     validators:
     - callable_builder: units
@@ -606,7 +611,7 @@ validators:
 
   ground_elevation:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: ground elevation in ft above mean sea level (ft AMSL)
       display_name: Ground Elevation
     validators:
     - callable_builder: number
@@ -645,7 +650,7 @@ validators:
 
   latitude:
     key_metadata:
-      description: units in degrees
+      description: Latitude in degrees
       display_name: Latitude
     validators:
     - callable_builder: units
@@ -705,7 +710,7 @@ validators:
 
   longitude:
     key_metadata:
-      description: units in degrees
+      description: Longitude in degrees
       display_name: Longitude
     validators:
     - callable_builder: units
@@ -722,7 +727,7 @@ validators:
 
   lower_seal_end_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Lower seal end depth in ft below ground surface (ft BGS)
       display_name: Lower Seal End Depth
     validators:
     - callable_builder: number
@@ -737,7 +742,7 @@ validators:
 
   lower_seal_start_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Lower seal start depth in ft below ground surface (ft BGS)
       display_name: Lower Seal Start Depth
     validators:
     - callable_builder: number
@@ -752,7 +757,6 @@ validators:
 
   lower_seal_type:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
       display_name: Lower Seal Type
     validators:
     - callable_builder: noop
@@ -774,7 +778,7 @@ validators:
 
   max_water_level:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: Maximum water level in ft above mean sea level (ft AMSL)
       display_name: Max Water Level
     validators:
     - callable_builder: number
@@ -796,7 +800,7 @@ validators:
 
   min_water_level:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: Minimum water level in ft above mean sea level (ft AMSL)
       display_name: Min Water Level
     validators:
     - callable_builder: number
@@ -852,7 +856,7 @@ validators:
 
   northing:
     key_metadata:
-      description: units in meters
+      description: Northing in meters
       display_name: Northing
     validators:
     - callable_builder: number
@@ -874,7 +878,7 @@ validators:
 
   open_casing_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Open casing depth in ft below ground surface (ft BGS)
       display_name: Open Casing Depth
     validators:
     - callable_builder: number
@@ -889,7 +893,7 @@ validators:
 
   open_casing_id:
     key_metadata:
-      description: open casing inner diameter. units in inches (in)
+      description: open casing inner diameter in inches (in)
       display_name: Open Casing ID
     validators:
     - callable_builder: number
@@ -905,7 +909,7 @@ validators:
 
   open_casing_od:
     key_metadata:
-      description: open casing outer diameter. units in inches (in)
+      description: open casing outer diameter in inches (in)
       display_name: Open Casing OD
     validators:
     - callable_builder: number
@@ -928,7 +932,7 @@ validators:
 
   open_hole_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Open hole depth in ft below ground surface (ft BGS)
       display_name: Open Hole Depth
     validators:
     - callable_builder: number
@@ -943,7 +947,7 @@ validators:
 
   open_hole_diameter:
     key_metadata:
-      description: units in inches
+      description: Open hole diameter in inches
       display_name: Open Hole Diameter
     validators:
     - callable_builder: number
@@ -959,7 +963,7 @@ validators:
 
   open_interval_diameter:
     key_metadata:
-      description: units in inches
+      description: Open interval diameter in inches
       display_name: Open Interval Diameter
     validators:
     - callable_builder: number
@@ -975,7 +979,7 @@ validators:
 
   open_interval_end_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Open interval end depth in ft below ground surface (ft BGS)
       display_name: Open Interval End Depth
     validators:
     - callable_builder: number
@@ -990,7 +994,7 @@ validators:
 
   open_interval_start_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Open interval start depth in ft below ground surface (ft BGS)
       display_name: Open Interval Start Depth
     validators:
     - callable_builder: number
@@ -1005,7 +1009,7 @@ validators:
 
   organic_carbon:
     key_metadata:
-      description: units in milligrams per gram dry weight
+      description: Organic carbon in milligrams per gram dry weight
       display_name: Organic Carbon
     validators:
     - callable_builder: number
@@ -1056,7 +1060,7 @@ validators:
 
   packing_depth_end:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Packind depth end in ft below ground surface (ft BGS)
       display_name: Packing Depth End
     validators:
     - callable_builder: number
@@ -1071,7 +1075,7 @@ validators:
 
   packing_depth_start:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Packind depth start in ft below ground surface (ft BGS)
       display_name: Packing Depth Start
     validators:
     - callable_builder: number
@@ -1142,7 +1146,7 @@ validators:
 
   pore_water_extraction:
     key_metadata:
-      description: units in microliters
+      description: Pore water extraction in microliters
       display_name: Pore Water Extraction
     validators:
     - callable_builder: number
@@ -1178,7 +1182,7 @@ validators:
 
   redox_potential_?:
     key_metadata:
-      display_name: Redox Potential  (?)
+      display_name: Redox Potential
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
@@ -1248,7 +1252,7 @@ validators:
 
   screen_bottom_elevation:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: Screen bottom elevation in ft above mean sea level (ft AMSL)
       display_name: Screen Bottom Elevation
     validators:
     - callable_builder: number
@@ -1263,7 +1267,7 @@ validators:
 
   screen_end_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Screen end depth in ft below ground surface (ft BGS)
       display_name: Screen End Depth
     validators:
     - callable_builder: number
@@ -1278,7 +1282,7 @@ validators:
 
   screen_start_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Screen start depth in ft below ground surface (ft BGS)
       display_name: Screen Start Depth
     validators:
     - callable_builder: number
@@ -1293,7 +1297,7 @@ validators:
 
   screen_top_elevation:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: Screen top elevation in ft above mean sea level (ft AMSL)
       display_name: Screen Top Elevation
     validators:
     - callable_builder: number
@@ -1322,7 +1326,7 @@ validators:
 
   screened_interval:
     key_metadata:
-      description: units in ft
+      description: Screened interval in ft
       display_name: Screened Interval
     validators:
     - callable_builder: number
@@ -1337,7 +1341,7 @@ validators:
 
   size:
     key_metadata:
-      description: units in meters cubed
+      description: Size in meters cubed
       display_name: Size
     validators:
     - callable_builder: units
@@ -1402,7 +1406,7 @@ validators:
 
   top_of_casing_elevation:
     key_metadata:
-      description: units in ft above mean sea level (ft AMSL)
+      description: Top of casing elevation in ft above mean sea level (ft AMSL)
       display_name: Top of Casing Elevation
     validators:
     - callable_builder: number
@@ -1417,7 +1421,7 @@ validators:
 
   top_of_casing_stickup:
     key_metadata:
-      description: units in ft
+      description: Top of casing stickup in ft
       display_name: Top of Casing Stickup
     validators:
     - callable_builder: number
@@ -1432,7 +1436,7 @@ validators:
 
   top_of_fresh_bedrock:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Top of fresh bedrock in ft below ground surface (ft BGS)
       display_name: Top of Fresh Bedrock
     validators:
     - callable_builder: number
@@ -1447,7 +1451,7 @@ validators:
 
   top_of_weathered_bedrock:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Top of weathered bedrock in ft below ground surface (ft BGS)
       display_name: Top of Weathered Bedrock
     validators:
     - callable_builder: number
@@ -1462,7 +1466,7 @@ validators:
 
   total_carbon:
     key_metadata:
-      description: units in milligrams per gram dry weight
+      description: Total carbon in milligrams per gram dry weight
       display_name: Total Carbon
     validators:
     - callable_builder: number
@@ -1478,7 +1482,7 @@ validators:
 
   total_nitrogen:
     key_metadata:
-      description: units in milligrams per gram dry weight
+      description: Total nitrogen in milligrams per gram dry weight
       display_name: Total Nitrogen
     validators:
     - callable_builder: number
@@ -1508,7 +1512,7 @@ validators:
 
   upper_seal_end_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Upper seal end depth in ft below ground surface (ft BGS)
       display_name: Upper Seal End Depth
     validators:
     - callable_builder: number
@@ -1523,7 +1527,7 @@ validators:
 
   upper_seal_start_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Upper seal start depth in ft below ground surface (ft BGS)
       display_name: Upper Seal Start Depth
     validators:
     - callable_builder: number
@@ -1559,7 +1563,7 @@ validators:
 
   well_casing_depth:
     key_metadata:
-      description: units in ft below ground surface (ft BGS)
+      description: Well casing depth in ft below ground surface (ft BGS)
       display_name: Well Casing Depth
     validators:
     - callable_builder: number
@@ -1574,7 +1578,7 @@ validators:
 
   well_casing_id:
     key_metadata:
-      description: well casing inner diameter. units in inches
+      description: Well casing inner diameter. units in inches
       display_name: Well Casing ID
     validators:
     - callable_builder: number
@@ -1590,7 +1594,7 @@ validators:
 
   well_casing_od:
     key_metadata:
-      description: well casing outer diameter. units in inches
+      description: Well casing outer diameter. units in inches
       display_name: Well Casing OD
     validators:
     - callable_builder: number
