@@ -1,7 +1,7 @@
 validators:
   age_max:
     key_metadata:
-      description: maximum age in years
+      description: Maximum age in years
       display_name: Age (max)
     validators:
     - callable_builder: units
