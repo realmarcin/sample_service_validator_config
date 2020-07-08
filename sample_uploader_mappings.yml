@@ -12,7 +12,7 @@ shared_fields:
     - time
     - timezone
     - material
-    - env_pakcage
+    - env_package
     - description
     - latitude
     - longitude
