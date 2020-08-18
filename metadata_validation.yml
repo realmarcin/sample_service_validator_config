@@ -1635,3 +1635,44 @@ validators:
     validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
+
+  gold:habitat:
+    key_metadata:
+      description:
+      display_name: Habitat
+    validators:
+    - callable_builder: noop
+      module: SampleService.core.validator.builtin
+
+  nmdc:community:
+    key_metadata:
+      description:
+      display_name: Community
+    validators:
+    - callable_builder: noop
+      module: SampleService.core.validator.builtin
+
+  gold:ncbi_taxonomy_name:
+    key_metadata:
+      description:
+      display_name: NCBI taxonomy name
+    validators:
+    - callable_builder: noop
+      module: SampleService.core.validator.builtin
+
+  nmdc:ecosystem_subtype:
+    key_metadata:
+      description:
+      display_name: Ecosystem Subtype
+    validators:
+    - callable_builder: noop
+      module: SampleService.core.validator.builtin
+
+  nmdc:ecosystem_type:
+    key_metadata:
+      description:
+      display_name: Ecosystem Type
+    validators:
+    - callable_builder: noop
+      module: SampleService.core.validator.builtin
+
