@@ -1660,7 +1660,7 @@ validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  "nmdc:ecosystem_subtype":
+  "gold:ecosystem_subtype":
     key_metadata:
       description:
       display_name: Ecosystem Subtype
@@ -1668,7 +1668,7 @@ validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  "nmdc:ecosystem_type":
+  "gold:ecosystem_type":
     key_metadata:
       description:
       display_name: Ecosystem Type
