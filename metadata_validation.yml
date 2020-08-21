@@ -1652,7 +1652,7 @@ validators:
     - callable_builder: noop
       module: SampleService.core.validator.builtin
 
-  "gold:ncbi_taxonomy_name":
+  "ncbi:taxonomy_name":
     key_metadata:
       description:
       display_name: NCBI taxonomy name
